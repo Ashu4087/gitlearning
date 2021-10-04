@@ -1,3 +1,3 @@
-//alert('Hello world from basic');
+alert('Hello world from basic');
 //alert(1);
-console.log('hello');
+//console.log('hello');
