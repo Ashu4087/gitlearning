@@ -1,0 +1,6 @@
+key learnings day 3
+//git
+..
+git intit -> initialize the .git in the pwd which track the changes of your project
+git config --global user.name  --> configure the owner of the project
+git config user.name -->to see the owner of the project 
