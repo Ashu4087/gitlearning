@@ -1,1 +1,74 @@
-//
+//Precedence of AND && is higher than OR ||
+
+The Boolean Not ( ! )operator accepts a single argument and does the following:
+
+1 .Converts the operand to boolean type: true/false.
+2 .Returns the inverse value.
+
+eg : 
+alert( !true ); // false
+alert( !0 ); // truealert( !!"non-empty string" ); // true
+alert( !!null ); // false
+
+That is, the first NOT converts the value to boolean and returns the inverse, and
+the second NOT inverses it again. In the end, we have a plain value-to-boolean conversion.
+
+# The nullish coalescing operator is written as two question marks ??.
+The result of a ?? b is:
+
+if a is defined, then a,
+if a isn’t defined, then b.
+
+In other words, ?? returns the first argument if it’s not null/undefined. 
+
+The important difference between them is that:
+
+|| returns the first truthy value.
+?? returns the first defined value.
+
+let x = 1 && 2 ?? 3; // Syntax error
+
+Due to safety reasons, JavaScript forbids using ?? together with && and || operators,
+ unless the precedence is explicitly specified with parentheses.
+
+
+#Labels for break/continue:
+A label is an identifier with a colon before a loop:
+outer : for(){  
+    for(){
+        if (!input) break outer; 
+        //break out of all loop..
+    }
+}
+
+Labels do not allow to “jump” anywhere:
+
+''break label; // jump to the label below (doesn't work)
+  label: for (...) '''
+
+A break directive must be inside a code block
+ 
+#switch:
+Any expression can be a switch/case argument
+Both switch and case allow arbitrary expressions.
+
+#FUNCTION
+to declare a FUNCTION "function" keywords is used
+function name(parameter1, parameter2, ... parameterN) {
+  ...body...
+}
+A variable declared inside a function is only visible inside that function.
+A function can access an outer variable as well,
+The outer variable is only used if there’s no local one.
+If a same-named variable is declared inside the function then it shadows the outer one.
+--> function always gets a copy of the value: Means the value only get changed inside the function only
+ but will remain same out of the function.
+A parameter is the variable listed inside the parentheses in the function declaration (it’s a declaration time term)
+An argument is the value that is passed to the function when it is called (it’s a call time term).
+A function can return a value. If it doesn’t, then its result is undefined.
+
+# Arrow functions:
+let func = (arg1, arg2, ..., argN) => expression;
+
+
+

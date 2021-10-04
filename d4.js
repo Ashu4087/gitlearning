@@ -21,3 +21,5 @@ console.log("null to 0 by >= / <= :" + (null >= 0)); //>converts null to 0
 
 //if(special character) ->false
 //special charactes are : 0 , null , "" , undefined , Nan.
+
+
