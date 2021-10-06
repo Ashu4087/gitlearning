@@ -8,6 +8,10 @@ key learnings day 3 (Version Control System):
 # "Git" is DVCS (Distributed Version Control System) : along with the remote repository every System has their own local repository..
 so the user can create their own version in their local system and whenever needed(and have Internet) add to remote repository..
 
+U -> Untracked file
+A -> Added  // in staging area
+M-> Modified file
+
 Q> How can we get remote repository ? (Having the versions of our project on Internet)
 --> We can create our own ..by buying/(creating our own pc ) a server and update our version...
 OR
@@ -36,7 +40,7 @@ git diff [first-branch]...[second-branch] // show the content difference between
 
 
 #push
-git remote add origin [url] // to add current local repo to remote repo having given url 
+git remote add [nickname to url reference] [url] // to add current local repo to remote repo having given url generally origin is the default nickname
 now push the changes using:
 git push origin [local branch name]:[rempote branch name]
 git push // will not work if the remote branch is not set/linked with local
