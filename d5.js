@@ -1,3 +1,6 @@
+
+/*
+
 let obj ={
     name : "Bean" , 
     age : 50,
@@ -67,4 +70,9 @@ for (let i in obb){
     console.log(i +" : " +obb[i]);
 }
 
+*/
+let fun = function(a , b){
+    //its body
+}
 
+console.log(fun);

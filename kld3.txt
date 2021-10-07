@@ -33,6 +33,7 @@ git log -p // If you also want to see complete diffs at each step
 git branch  // shows the current branch on which you are working on
 git branch [branch-name] // create a branch with given name.
 git checkout [branch-name] // switches to the given branch and modify the file
+git switch
 git merge [branch] // merge the given branch in present working branch
 git branch -d [branch-name] //delete the specified branch
 git log --follow [file] // list the version history of file with rename
@@ -42,10 +43,10 @@ git diff [first-branch]...[second-branch] // show the content difference between
 #push
 git remote add [nickname to url reference] [url] // to add current local repo to remote repo having given url generally origin is the default nickname
 now push the changes using:
-git push origin [local branch name]:[rempote branch name]
 git push // will not work if the remote branch is not set/linked with local
  git push origin master // to define the default remote branch for the local branch .. so it will ask for username and passed
-
+ git push origin [local branch name]:[rempote branch name]
+ 
 git push -u remote master ...
 git push --set-upstream origin master // Now the remote master branch is set to track the local master branch..
 //Now run "git push" the changes made to local master branch is reflected to remote master branch.
