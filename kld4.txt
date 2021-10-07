@@ -99,6 +99,9 @@ A function can return a value. If it doesn’t, then its result is undefined.
 
 # Arrow functions:
 let func = (arg1, arg2, ..., argN) => expression;
+//This creates a function func that accepts arguments arg1..argN, then evaluates
+ the expression on the right side with their use and returns its result....or simply remove "function" keyword and add "=>" symbol
+()=> 2+5 // will also work as it return 7 and console.log print it ..
 
 
 

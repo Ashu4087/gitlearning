@@ -21,8 +21,13 @@ A property is a “key: value” pair, where key is a string (also called a “p
 
 #difference between the [] and . to acces or modify the property of object:
     // this would give a syntax error
+    1>
     user.likes birds = false;
     user["likes birds"] = false ; // will work fine and change the value of "likes birds" 
+    2>
+    let man = name ;
+    
+
 
 #We can use square brackets in an object literal, when creating an object. That’s called computed properties:
     

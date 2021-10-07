@@ -73,6 +73,13 @@ for (let i in obb){
 */
 let fun = function(a , b){
     //its body
+    console.log("inside fun")
 }
 
+let func = fun ; //copy the fun to func
+//but if we write let func  = fun() ; //with parantesis then finc has value retuned by the fun  
+func(); // will work
+
 console.log(fun);
+let a = ()=>2+3 ;
+console.log(a())

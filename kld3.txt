@@ -38,6 +38,10 @@ git merge [branch] // merge the given branch in present working branch
 git branch -d [branch-name] //delete the specified branch
 git log --follow [file] // list the version history of file with rename
 git diff [first-branch]...[second-branch] // show the content difference between the first and second branch
+git show // show the content of file of last commited
+git show [commit id] // show the content of given id..
+git show --name-only //will show only the file name that commited..
+git show --name-only -n 2 // show last 2 commit 
 
 
 #push
@@ -46,7 +50,7 @@ now push the changes using:
 git push // will not work if the remote branch is not set/linked with local
  git push origin master // to define the default remote branch for the local branch .. so it will ask for username and passed
  git push origin [local branch name]:[rempote branch name]
- 
+
 git push -u remote master ...
 git push --set-upstream origin master // Now the remote master branch is set to track the local master branch..
 //Now run "git push" the changes made to local master branch is reflected to remote master branch.
@@ -55,6 +59,10 @@ git push -u origin master ... //will do the same things remote master -> local m
 
 git fetch -v  //it will only download the recent changes in the remote branch to the remote bracnh but not to the cwd(on your pc)..
 git pull -v  // download the current changes in remote brance to local and at cwd (pc) as well..
+
+
+#deletion in git:
+git rebase -i HEAD~n // git move head to last 3 commit made and allow you to so some changes..
 
 
 
