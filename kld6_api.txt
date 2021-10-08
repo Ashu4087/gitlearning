@@ -1,0 +1,29 @@
+API ->  Application prigramming Interface ..
+-- It is basically a messanger which takes the request from the user and tells the system what is needed and 
+takes the info from system and return the response.
+
+Q> why do we need API ..can't the user directly ask for the info/data needed..?
+--> For the security purpose as well the more number of user, system use api to interact with users and may have api key 
+to veryfiy the users and provides the data for which they are authenticated..
+
+Q> what is the types of data send by the api?
+--> The data is Basically in XLM/JSON format..
+
+JSON (JavaScript Object notation) basically stores data in object form and redirect/transfer data to the requested user ...
+it may be browser...
+
+
+HTTP request method : 
+    Both GET and POST method is used to transfer data from client to server in HTTP protocol but
+     Main difference between POST and GET method is that
+    GET carries request parameter appended in URL string while POST carries request parameter in message body .
+    Get is use to fetch documents while Post is used for updating data..
+    Get has limited max length of url but is not for post
+    Get can be cache but not post.
+
+Network Request:
+
+fetch:-
+JavaScript can send network requests to the server and load new information whenever it’s needed.
+    And all of that without reloading the page!
+

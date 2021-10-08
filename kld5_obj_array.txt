@@ -1,0 +1,117 @@
+//
+# Object:
+objects are used to store keyed collections of various data and more complex entities.
+An object can be created with figure brackets {…} with an optional list of propertie..
+A property is a “key: value” pair, where key is a string (also called a “property name”), and value can be anything.
+''' let user = new Object(); // "object constructor" syntax
+    let user = {};  // "object literal" syntax
+
+    let user = {     // an object
+  name: "John",  // by key "name" store value "John"
+  age: 30        // by key "age" store value 30
+  "likes birds": true  // multiword property name must be quoted
+};
+
+    1> Property values are accessible using the dot notation:
+    for eg :
+        console.log(user.name);
+
+    2> To remove a property, we can use delete operator:
+        delete user.age;
+
+#difference between the [] and . to acces or modify the property of object:
+    // this would give a syntax error
+    1>
+    user.likes birds = false;
+    user["likes birds"] = false ; // will work fine and change the value of "likes birds" 
+    2>
+    let man = name ;
+    
+
+
+#We can use square brackets in an object literal, when creating an object. That’s called computed properties:
+    
+    '''
+    let fruit = prompt("Which fruit to buy?", "apple");
+    let bag = {
+    [fruit]: 5, // the name of the property is taken from the variable fruit
+    }; '''
+
+#Reading a non-existing property just returns undefined. So we can easily test whether the property exists:
+alert( user.noSuchProperty === undefined )
+
+#There’s also a special operator "in" for that.
+alert( "age" in user ); // true, user.age exists
+
+
+let obj = {
+  test: undefined
+};
+
+alert( obj.test ); // it's undefined, so - no such property?
+
+alert( "test" in obj ); // true, the property does exist!
+
+#To walk over all keys of an object, there exists a special form of the loop: for..in
+
+
+-----------------------------------------------------------------------------------------------------------------------
+# One of the fundamental differences of objects versus primitives is that objects are stored and copied “by reference”, 
+whereas primitive values: strings, numbers, booleans, etc – are always copied “as a whole value”.
+
+When an object variable is copied, the reference is copied, but the object itself is not duplicated.
+    let user = { name: 'John' };
+    let admin = user;
+    admin.name = 'Pete'; // changed by the "admin" reference
+    alert(user.name); // 'Pete', changes are seen from the "user" reference
+
+copy a object whole:
+let obb = {}
+(obj == obb) // gives false 
+
+for(let va in  obj){
+    obb[va] = obj[va];
+}
+
+or : we can use Object.assign
+Object.assign(dest, [src1, src2, src3...])
+for eg:
+let permissions1 = { canView: true };
+let permissions2 = { canEdit: true };
+
+// copies all properties from permissions1 and permissions2 into user
+Object.assign(obj, permissions1, permissions2);//now obj = { name: "ninja",age :15 ,  canView: true, canEdit: true }
+
+or we can simply do:
+let obb = Object.assign({},obj); // this will copy the all the properties of obj to empty obj and the return to the obb;
+
+
+#Array:
+let a = {};
+let a = new Array(); // new Array(2) // empty array of size 2 ; 
+a.lenght // gives the lenght of array
+//array can have mixed type of element
+let arr = [ 'Apple', { name: 'John' }, true, function() { alert('hello'); } ];
+this way also array can be created
+let fruits = [
+  "Apple",
+  "Orange",
+  "Plum",
+];
+
+#Array Methods: 
+1> array.push("values") // push n elements at the end of array.. and increase the lenght of array:
+2> array.pop() // pop an element at the end of array.. and decrese the length of array:
+3> array.unshift("values") // add n elements at the begining of the array;
+4> array.shift() // delete an element from the begining of the array and return it.
+// shifts opetrations took more time than push or pop
+5> arr.splice(start[, deleteCount, elem1, ..., elemN]) // remove the element from start index to the no. of count of element and then insert the elem1
+     to elemN inplace of deleted element stating from index start..  
+     here negative index means starting from end 
+     eg:
+     arr.splice(-2, 1, "hi,"tim"); //delete the element from second last to last and insert hi and tim;
+
+6> arr.slice([start] , [end]) ; //retutrn a new array copying the element from array from start index to end
+    eg: arr.slice(2, 4) ; //copy array elemet from index 2 to 4
+        arr.slice(-2) ; //copy the element from 2nd end to last..
+7> 
