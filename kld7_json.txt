@@ -1,0 +1,62 @@
+JSON stands for JavaScript Object Notation
+JSON is a text format for storing and transporting data
+JSON is "self-describing" and Human readable easy to understand
+JSON is a lightweight data-interchange format
+JSON is language independent *
+
+Since the format is text only, JSON data can easily be sent between computers, and used by any programming language.
+
+'''When sending data to a web server, the data has to be a string'''.
+Convert a 'JavaScript object' into a string with JSON.stringify().
+
+JavaScript also has a built in function for converting an object into a JSON string:
+JSON.stringify()
+
+eg: 
+let jsObj = {
+    name : "ask" , 
+    age : 23 , 
+    location : "India" ,
+    isHuman : yes // boolean
+};
+
+let jsonString = JSON.stringify(jsObj);
+
+#Need of parsing..
+JSON is use to exchange data to/from a web server.
+'''When receiving data from a web server, the data is always a string '''.
+Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+""Make sure the text is in 'JSON format', or else you will get a syntax error.""
+
+When using the JSON.parse() on a JSON derived from an array, the method will return a JavaScript array,
+instead of a JavaScript object. 
+
+
+
+JavaScript has a built in function for converting JSON strings into JavaScript objects:
+JSON.parse()
+
+let newjsonOjb = JSON.parse(jsonString);
+
+You can receive pure text from a server and use it as a JavaScript object.
+You can send a JavaScript object to a server in pure text format.
+You can work with data as JavaScript objects, with no complicated parsing and translations.
+
+JSON syntax is derived from JavaScript object notation syntax:
+
+Data is in name/value pairs
+Data is separated by commas
+Curly braces hold objects
+Square brackets hold arrays
+
+In JSON, values must be one of the following data types:
+
+a string
+a number
+an object
+an array
+a boolean
+null
+
+
+
