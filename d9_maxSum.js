@@ -28,7 +28,7 @@ let directCall = ()=>{
 }
 
 
-console.log(`the maximum sum of subarray using directcall is :`,directCall());
+//console.log(`the maximum sum of subarray using directcall is :`,directCall());
 
 
 
@@ -37,26 +37,31 @@ console.log(`the maximum sum of subarray using directcall is :`,directCall());
 //or i can read from ..
 
 
-/* #M1
-read from console using readline
-
-const readLine = require('readline-sync');
+/* #M1 
+read from console using readline*/
+import * as readLine from 'node:realine' ;
+import { stdin as input, stdout as output } from 'process';
 
 //now i can use methods of readline-sync using readLine 
 
-consoleRead()=>{
-    let size = Number(readLine.question('Enter the size of array,'));
-    let numArray = [];
+//function consoleRead(){
+    let size = Number(readLine.question('Enter the size of array'));
+    
+        console.log(size);
+        readLine.close();
+     /*   let numArray = [];
     for (let in = 0; in<size ; i++){
-        numArray.push(Number(readLine.question()));
+        numArray.push(Number(readLine.question(`Please enter ${size} Numbers`,)));
     }
-    console.log(`the maximum sum of subarray is :`,sum(numArray));
-}
-
 */
+    //console.log(`the maximum sum of subarray is :`,sum(numArray));
+    //});
+    
+//}
 
 
- //#M2
+
+ /*#M2
     //reading from json file..
     //readfile()=> {
 

@@ -6,7 +6,7 @@
 
 import fetch from 'node-fetch';
 
-/*
+
 let url_local = "./d7_fetch_data.json" ; 
 let url_remote = "http://api.openweathermap.org/jsObject/2.5/forecast?id=524901&appid=74382af856f0d02d7f684c901b965614"
 
